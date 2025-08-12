@@ -1,6 +1,8 @@
 "use client";
+import { PortfolioCard } from "@/components/portfolio-card";
+import { projects } from "@/data";
 import { easeOut, motion, spring } from "framer-motion";
-import { Github, Linkedin, Twitter, Code, Palette, Zap, Calendar, MapPin, Mail, ExternalLink, Download, Users, Trophy, Lightbulb } from "lucide-react";
+import { Github, Linkedin, Twitter, Code, Palette, Zap, MapPin, Mail, Download, Users } from "lucide-react";
 import { useEffect, useState } from "react";
 
 export default function Home() {
@@ -47,32 +49,32 @@ export default function Home() {
     }
   ];
 
-  const projects = [
-    {
-      title: "E-Commerce Platform",
-      description: "Full-stack e-commerce solution with Next.js, featuring advanced filtering, cart management, and payment integration.",
-      tech: ["Next.js", "TypeScript", "Tailwind", "Stripe"],
-      image: "/api/placeholder/400/250",
-      liveUrl: "#",
-      githubUrl: "#"
-    },
-    {
-      title: "Task Management App",
-      description: "Collaborative project management tool with real-time updates, drag-and-drop functionality, and team collaboration features.",
-      tech: ["React", "Node.js", "Socket.io", "MongoDB"],
-      image: "/api/placeholder/400/250",
-      liveUrl: "#",
-      githubUrl: "#"
-    },
-    {
-      title: "Portfolio Website",
-      description: "Modern portfolio with smooth animations, responsive design, and optimized performance using latest web technologies.",
-      tech: ["Next.js", "Framer Motion", "Tailwind"],
-      image: "/api/placeholder/400/250",
-      liveUrl: "#",
-      githubUrl: "#"
-    }
-  ];
+  // const projects = [
+  //   {
+  //     title: "E-Commerce Platform",
+  //     description: "Full-stack e-commerce solution with Next.js, featuring advanced filtering, cart management, and payment integration.",
+  //     tech: ["Next.js", "TypeScript", "Tailwind", "Stripe"],
+  //     image: "/api/placeholder/400/250",
+  //     liveUrl: "#",
+  //     githubUrl: "#"
+  //   },
+  //   {
+  //     title: "Task Management App",
+  //     description: "Collaborative project management tool with real-time updates, drag-and-drop functionality, and team collaboration features.",
+  //     tech: ["React", "Node.js", "Socket.io", "MongoDB"],
+  //     image: "/api/placeholder/400/250",
+  //     liveUrl: "#",
+  //     githubUrl: "#"
+  //   },
+  //   {
+  //     title: "Portfolio Website",
+  //     description: "Modern portfolio with smooth animations, responsive design, and optimized performance using latest web technologies.",
+  //     tech: ["Next.js", "Framer Motion", "Tailwind"],
+  //     image: "/api/placeholder/400/250",
+  //     liveUrl: "#",
+  //     githubUrl: "#"
+  //   }
+  // ];
 
   const services = [
     {
@@ -221,14 +223,10 @@ export default function Home() {
             <div className="grid md:grid-cols-2 gap-12 items-center">
               <div className="text-left space-y-6">
                 <p className="text-lg text-gray-700 leading-relaxed">
-                  I'm a passionate Frontend Engineer with over 3 years of experience crafting digital experiences 
-                  that users love. My journey started with curiosity about how websites work, and it's evolved 
-                  into a career focused on building scalable, performant, and beautiful web applications.
+                  {"I'm a passionate Frontend Engineer with over 3 years of experience crafting digital experiences that users love. My journey started with curiosity about how websites work, and it's evolved into a career focused on building scalable, performant, and beautiful web applications."}
                 </p>
                 <p className="text-lg text-gray-700 leading-relaxed">
-                  When I'm not coding, you'll find me exploring new technologies, contributing to open-source 
-                  projects, or sharing knowledge with the developer community. I believe in clean code, 
-                  continuous learning, and creating solutions that make a real impact.
+                  {"When I'm not coding, you'll find me exploring new technologies, contributing to open-source projects, or sharing knowledge with the developer community. I believe in clean code, continuous learning, and creating solutions that make a real impact."}
                 </p>
                 <div className="flex items-center gap-6 pt-4">
                   <div className="flex items-center gap-2">
@@ -254,7 +252,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Skills Section */}
+        {/* Skills Section */}
       <section className="py-20 bg-gray-50">
         <div className="container mx-auto px-6">
           <motion.h2
@@ -354,7 +352,7 @@ export default function Home() {
           </motion.h2>
           
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
-            {projects.map((project, index) => (
+            {projects.slice(0, 3).map((project, index) => (
               <motion.div
                 key={project.title}
                 initial={{ opacity: 0, y: 50 }}
@@ -363,40 +361,7 @@ export default function Home() {
                 transition={{ delay: index * 0.1 }}
                 className="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 group"
               >
-                <div className="relative h-48 bg-gradient-to-br from-purple-400 to-blue-500 flex items-center justify-center">
-                  <Trophy className="w-16 h-16 text-white/50" />
-                  <div className="absolute inset-0 bg-black/20 group-hover:bg-black/40 transition-colors duration-300"></div>
-                </div>
-                
-                <div className="p-6">
-                  <h3 className="text-xl font-bold mb-3">{project.title}</h3>
-                  <p className="text-gray-600 mb-4 text-sm leading-relaxed">{project.description}</p>
-                  
-                  <div className="flex flex-wrap gap-2 mb-4">
-                    {project.tech.map((tech) => (
-                      <span key={tech} className="px-3 py-1 bg-gray-100 text-gray-700 text-xs rounded-full">
-                        {tech}
-                      </span>
-                    ))}
-                  </div>
-                  
-                  <div className="flex gap-3">
-                    <a 
-                      href={project.liveUrl}
-                      className="flex items-center gap-1 text-blue-600 hover:text-blue-800 text-sm font-medium"
-                    >
-                      <ExternalLink className="w-4 h-4" />
-                      Live Demo
-                    </a>
-                    <a 
-                      href={project.githubUrl}
-                      className="flex items-center gap-1 text-gray-600 hover:text-gray-800 text-sm font-medium"
-                    >
-                      <Github className="w-4 h-4" />
-                      Code
-                    </a>
-                  </div>
-                </div>
+                <PortfolioCard {...project} />
               </motion.div>
             ))}
           </div>
@@ -445,9 +410,9 @@ export default function Home() {
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
           >
-            <h2 className="text-4xl md:text-6xl font-bold mb-8 tracking-[.3rem]">Let's Work Together</h2>
+            <h2 className="text-4xl md:text-6xl font-bold mb-8 tracking-[.3rem]">{"Let's Work Together"}</h2>
             <p className="text-xl text-gray-300 mb-12 max-w-2xl mx-auto leading-relaxed">
-              Ready to bring your ideas to life? I'm always excited to work on new projects and collaborate with amazing people.
+              {"Ready to bring your ideas to life? I'm always excited to work on new projects and collaborate with amazing people."}
             </p>
             
             <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">

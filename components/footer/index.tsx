@@ -59,8 +59,7 @@ export default function Footer() {
                 Frontend Engineer
               </p>
               <p className="text-gray-400 leading-relaxed max-w-md">
-                Passionate about creating beautiful, functional, and user-centered digital experiences. 
-                Always exploring new technologies and pushing the boundaries of what's possible on the web.
+                {"Passionate about creating beautiful, functional, and user-centered digital experiences. Always exploring new technologies and pushing the boundaries of what's possible on the web."}
               </p>
             </motion.div>
 
