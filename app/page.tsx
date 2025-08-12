@@ -49,33 +49,6 @@ export default function Home() {
     }
   ];
 
-  // const projects = [
-  //   {
-  //     title: "E-Commerce Platform",
-  //     description: "Full-stack e-commerce solution with Next.js, featuring advanced filtering, cart management, and payment integration.",
-  //     tech: ["Next.js", "TypeScript", "Tailwind", "Stripe"],
-  //     image: "/api/placeholder/400/250",
-  //     liveUrl: "#",
-  //     githubUrl: "#"
-  //   },
-  //   {
-  //     title: "Task Management App",
-  //     description: "Collaborative project management tool with real-time updates, drag-and-drop functionality, and team collaboration features.",
-  //     tech: ["React", "Node.js", "Socket.io", "MongoDB"],
-  //     image: "/api/placeholder/400/250",
-  //     liveUrl: "#",
-  //     githubUrl: "#"
-  //   },
-  //   {
-  //     title: "Portfolio Website",
-  //     description: "Modern portfolio with smooth animations, responsive design, and optimized performance using latest web technologies.",
-  //     tech: ["Next.js", "Framer Motion", "Tailwind"],
-  //     image: "/api/placeholder/400/250",
-  //     liveUrl: "#",
-  //     githubUrl: "#"
-  //   }
-  // ];
-
   const services = [
     {
       icon: Code,
