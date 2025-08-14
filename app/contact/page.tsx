@@ -145,7 +145,7 @@ const ContactPage = () => {
           variants={containerVariants}
           className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-20"
         >
-          {contactMethods.map((method, index) => (
+          {contactMethods.map((method) => (
             <motion.a
               key={method.label}
               href={method.href}
@@ -187,7 +187,7 @@ const ContactPage = () => {
           </motion.h2>
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {quickActions.map((action, index) => (
+            {quickActions.map((action) => (
               <motion.div
                 key={action.title}
                 variants={cardVariants}
@@ -228,7 +228,7 @@ const ContactPage = () => {
           </motion.h3>
           
           <div className="flex justify-center space-x-6">
-            {socialLinks.map((social, index) => (
+            {socialLinks.map((social) => (
               <motion.a
                 key={social.label}
                 href={social.href}

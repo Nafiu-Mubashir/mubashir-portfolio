@@ -32,39 +32,6 @@ export default function Home() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  const skills = [
-    { name: "React & Next.js", level: 95, color: "bg-blue-500" },
-    { name: "TypeScript", level: 90, color: "bg-blue-600" },
-    { name: "Tailwind CSS", level: 95, color: "bg-cyan-500" },
-    { name: "JavaScript", level: 92, color: "bg-yellow-500" },
-    { name: "Node.js", level: 85, color: "bg-green-500" },
-    { name: "MongoDB", level: 80, color: "bg-green-600" },
-  ];
-
-  const experiences = [
-    {
-      period: "2023 - Present",
-      role: "Senior Frontend Engineer",
-      company: "Tech Innovation Co.",
-      description:
-        "Leading frontend development for enterprise applications, mentoring junior developers, and implementing modern React architectures.",
-    },
-    {
-      period: "2021 - 2023",
-      role: "Frontend Developer",
-      company: "Digital Solutions Ltd.",
-      description:
-        "Built responsive web applications using React and TypeScript, collaborated with design teams to create pixel-perfect UIs.",
-    },
-    {
-      period: "2020 - 2021",
-      role: "Junior Developer",
-      company: "StartupHub",
-      description:
-        "Started my professional journey building landing pages and small applications, learning modern development practices.",
-    },
-  ];
-
   const services = [
     {
       icon: Code,

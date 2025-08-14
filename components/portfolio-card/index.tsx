@@ -27,7 +27,7 @@ export const PortfolioCard: React.FC<PortfolioCardProps> = ({
   category,
   featured = false
 }) => {
-  const [isHovered, setIsHovered] = useState(false);
+  const [, setIsHovered] = useState(false);
 
   const cardVariants = {
     initial: {
