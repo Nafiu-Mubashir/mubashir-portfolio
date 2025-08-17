@@ -2,6 +2,7 @@
 import React from 'react';
 import { easeOut, motion } from 'framer-motion';
 import { Mail, Phone, MapPin, Github, Linkedin, Twitter, Calendar, Coffee, Zap } from 'lucide-react';
+import Link from 'next/link';
 
 const ContactPage = () => {
   const containerVariants = {
@@ -258,13 +259,13 @@ const ContactPage = () => {
             whileTap={{ scale: 0.95 }}
             className="inline-block"
           >
-            <a
+            <Link
               href="mailto:mubashirnafiu@gmail.com"
               className="inline-flex items-center px-12 py-6 bg-gradient-to-r from-purple-600 via-pink-600 to-blue-600 text-white font-bold text-xl rounded-full hover:shadow-2xl hover:shadow-purple-500/50 transition-all duration-300 group"
             >
               <Mail className="w-6 h-6 mr-3 group-hover:animate-bounce" />
               Start a Conversation
-            </a>
+            </Link>
           </motion.div>
           
           <motion.p

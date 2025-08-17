@@ -2,6 +2,7 @@
 
 import { Github, Linkedin, Twitter, Mail, MapPin } from "lucide-react";
 import { motion } from "framer-motion";
+import Link from "next/link";
 
 // Footer Component
 export default function Footer() {
@@ -9,19 +10,19 @@ export default function Footer() {
 
   const socialLinks = [
     {
-      href: "https://github.com/yourusername",
+      href: "https://github.com/Nafiu-Mubashir",
       icon: Github,
       hoverColor: "group-hover:text-purple-400 group-hover:border-purple-400",
       label: "GitHub"
     },
     {
-      href: "https://linkedin.com/in/yourusername",
+      href: "https://www.linkedin.com/in/nafiu-mubashir-adedayo/",
       icon: Linkedin,
       hoverColor: "group-hover:text-blue-400 group-hover:border-blue-400",
       label: "LinkedIn"
     },
     {
-      href: "https://twitter.com/yourusername",
+      href: "https://x.com/AdedayoMubashir",
       icon: Twitter,
       hoverColor: "group-hover:text-cyan-400 group-hover:border-cyan-400",
       label: "Twitter"
@@ -75,16 +76,16 @@ export default function Footer() {
               <div className="space-y-4">
                 <div className="flex items-center space-x-3">
                   <Mail className="w-4 h-4 text-gray-400" />
-                  <a 
+                  <Link 
                     href="mailto:mubashirnafiu@gmail.com"
                     className="text-gray-300 hover:text-white transition-colors duration-300"
                   >
                     mubashirnafiu@gmail.com
-                  </a>
+                  </Link>
                 </div>
                 <div className="flex items-center space-x-3">
                   <MapPin className="w-4 h-4 text-gray-400" />
-                  <span className="text-gray-300">Lagos, Nigeria</span>
+                  <span className="text-gray-300">Oyo, Nigeria</span>
                 </div>
               </div>
             </motion.div>
@@ -137,9 +138,9 @@ export default function Footer() {
               <p className="text-gray-400 text-sm">
                 © {currentYear} Nafiu Mubashir A. All rights reserved.
               </p>
-              <p className="text-gray-500 text-xs">
+              {/* <p className="text-gray-500 text-xs">
                 Built with ❤️ using Next.js & Tailwind CSS
-              </p>
+              </p> */}
             </div>
             
             {/* <div className="flex space-x-6 text-sm">

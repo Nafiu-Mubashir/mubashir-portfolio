@@ -6,7 +6,7 @@ import { ExternalLink, Github, Calendar, Eye } from 'lucide-react';
 
 interface PortfolioCardProps {
   title: string;
-  description: string;
+  description?: string;
   image: string;
   stack: string[];
   liveUrl?: string;
@@ -174,7 +174,7 @@ export const PortfolioCard: React.FC<PortfolioCardProps> = ({
         </motion.div>
 
         {/* Category Badge */}
-        <div className="absolute top-4 left-4 bg-gray-800/80 backdrop-blur-sm text-gray-200 text-xs px-3 py-1 rounded-full font-medium">
+        <div className="absolute top-4 right-4 bg-gradient-to-r from-blue-500 to-purple-600 text-white text-xs px-3 py-1 rounded-full font-medium">
           {category}
         </div>
       </div>
@@ -194,7 +194,7 @@ export const PortfolioCard: React.FC<PortfolioCardProps> = ({
 
         {/* Description */}
         <p className="text-gray-300 text-sm leading-relaxed mb-4">
-          {description}
+          {/* {description} */}
         </p>
 
         {/* Tech Stack */}

@@ -1,13 +1,12 @@
 "use client";
 import { PortfolioCard } from "@/components/portfolio-card";
-import { projects } from "@/data";
+import { backend, devTools, projects, services, Skills, technologies } from "@/data";
 import { easeOut, motion, spring } from "framer-motion";
 import {
   Github,
   Linkedin,
   Twitter,
   Code,
-  Palette,
   Zap,
   MapPin,
   Mail,
@@ -16,6 +15,7 @@ import {
   Wrench,
   Database,
 } from "lucide-react";
+import Link from "next/link";
 import { useEffect, useState } from "react";
 
 export default function Home() {
@@ -32,26 +32,7 @@ export default function Home() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  const services = [
-    {
-      icon: Code,
-      title: "Frontend Development",
-      description:
-        "Modern, responsive web applications using React, Next.js, and TypeScript with focus on performance and user experience.",
-    },
-    {
-      icon: Palette,
-      title: "UI/UX Implementation",
-      description:
-        "Pixel-perfect implementation of designs with smooth animations and interactions using Framer Motion and CSS.",
-    },
-    {
-      icon: Zap,
-      title: "Performance Optimization",
-      description:
-        "Speed optimization, code splitting, and SEO improvements to ensure your application loads fast and ranks well.",
-    },
-  ];
+ 
 
   return (
     <div className="">
@@ -151,21 +132,23 @@ export default function Home() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 2, duration: 0.6 }}
           >
-            <a href="/Nafiu Mubashir Adedayo FE - CV.pdf" download>
+            <Link href="/Nafiu Mubashir Adedayo FE - CV.pdf" download>
               <button className="relative overflow-hidden group border border-white rounded-full px-6 py-2 tracking-[.3rem] cursor-pointer text-white">
                 <span className="relative z-10 group-hover:text-black transition-colors duration-500">
                   Resume
                 </span>
                 <span className="absolute left-0 top-0 h-full w-0 bg-white group-hover:w-full transition-all duration-500 ease-out"></span>
               </button>
-            </a>
+            </Link>
 
+            <Link href={'/portfolio'}>
             <button className="relative overflow-hidden group border border-white rounded-full px-6 py-2 tracking-[.3rem] cursor-pointer text-white">
               <span className="relative z-10 group-hover:text-black transition-colors duration-500">
                 Portfolio
               </span>
               <span className="absolute right-0 top-0 h-full w-0 bg-white group-hover:w-full transition-all duration-500 ease-out"></span>
             </button>
+            </Link>
           </motion.div>
         </div>
       </div>
@@ -197,7 +180,7 @@ export default function Home() {
                 <div className="flex items-center gap-6 pt-4">
                   <div className="flex items-center gap-2">
                     <MapPin className="w-5 h-5 text-gray-600" />
-                    <span className="text-gray-700">Lagos, Nigeria</span>
+                    <span className="text-gray-700">Oyo, Nigeria</span>
                   </div>
                   <div className="flex items-center gap-2">
                     <Mail className="w-5 h-5 text-gray-600" />
@@ -324,56 +307,7 @@ export default function Home() {
                   </div>
                 </div>
 
-                {[
-                  {
-                    name: "Next.js",
-                    level: 95,
-                    icon: "⚛️",
-                    color: "from-black to-gray-600",
-                  },
-                  {
-                    name: "React",
-                    level: 92,
-                    icon: "⚛️",
-                    color: "from-blue-400 to-blue-600",
-                  },
-                  {
-                    name: "Vue.js",
-                    level: 88,
-                    icon: "🟢",
-                    color: "from-green-400 to-green-600",
-                  },
-                  {
-                    name: "TypeScript",
-                    level: 90,
-                    icon: "🔷",
-                    color: "from-blue-600 to-blue-800",
-                  },
-                  {
-                    name: "Redux",
-                    level: 85,
-                    icon: "🔄",
-                    color: "from-purple-500 to-purple-700",
-                  },
-                  {
-                    name: "React Query",
-                    level: 83,
-                    icon: "🚀",
-                    color: "from-red-500 to-pink-600",
-                  },
-                  {
-                    name: "Tailwind CSS",
-                    level: 95,
-                    icon: "🎨",
-                    color: "from-cyan-400 to-blue-500",
-                  },
-                  {
-                    name: "Framer Motion",
-                    level: 87,
-                    icon: "🎭",
-                    color: "from-pink-500 to-rose-600",
-                  },
-                ].map((skill, index) => (
+                {Skills.map((skill, index) => (
                   <motion.div
                     key={skill.name}
                     initial={{ opacity: 0, y: 20 }}
@@ -431,28 +365,7 @@ export default function Home() {
                     Core Technology Stack
                   </h4>
                   <div className="grid grid-cols-2 gap-4">
-                    {[
-                      {
-                        name: "Next.js",
-                        icon: "⚛️",
-                        color: "from-black to-gray-700",
-                      },
-                      {
-                        name: "TypeScript",
-                        icon: "🔷",
-                        color: "from-blue-600 to-blue-800",
-                      },
-                      {
-                        name: "Tailwind",
-                        icon: "🎨",
-                        color: "from-cyan-500 to-blue-600",
-                      },
-                      {
-                        name: "Framer Motion",
-                        icon: "🎭",
-                        color: "from-purple-500 to-pink-600",
-                      },
-                    ].map((tech, index) => (
+                    {technologies.map((tech, index) => (
                       <motion.div
                         key={tech.name}
                         initial={{ opacity: 0, scale: 0.8 }}
@@ -488,16 +401,7 @@ export default function Home() {
                     </div>
                   </div>
                   <div className="grid grid-cols-2 gap-4">
-                    {[
-                      "Git & GitHub",
-                      "VS Code",
-                      "Webpack",
-                      "ESLint",
-                      "Prettier",
-                      "Chrome DevTools",
-                      "Figma",
-                      "Postman",
-                    ].map((tool, index) => (
+                    {devTools.map((tool, index) => (
                       <motion.div
                         key={tool}
                         initial={{ opacity: 0, y: 10 }}
@@ -538,16 +442,7 @@ export default function Home() {
                     </div>
                   </div>
                   <div className="flex flex-wrap gap-2">
-                    {[
-                      "Node.js",
-                      "Express.js",
-                      "MongoDB",
-                      "PostgreSQL",
-                      "Docker",
-                      "AWS",
-                      "GraphQL",
-                      "Web3",
-                    ].map((tech, index) => (
+                    {backend.map((tech, index) => (
                       <motion.span
                         key={tech}
                         initial={{ opacity: 0, scale: 0.8 }}
@@ -923,7 +818,7 @@ export default function Home() {
       </section>
       {/* Projects Section */}
       <section className="py-20 bg-gray-50">
-        <div className="container mx-auto px-6">
+        <div className="container mx-auto px-6 space-y-4">
           <motion.h2
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -947,6 +842,14 @@ export default function Home() {
               </motion.div>
             ))}
           </div>
+         <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
+              <Link
+                href="/portfolio"
+                className="text-white bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 px-8 py-4 rounded-full font-semibold tracking-[.2rem] transition-all duration-300 hover:scale-105"
+              >
+                View More
+              </Link>
+            </div>
         </div>
       </section>
       {/* Services Section */}
@@ -1002,21 +905,21 @@ export default function Home() {
             </p>
 
             <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
-              <a
-                href="mailto:nafiu@example.com"
+              <Link
+                href="/contact"
                 className="bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 px-8 py-4 rounded-full font-semibold tracking-[.2rem] transition-all duration-300 hover:scale-105"
               >
                 Get In Touch
-              </a>
+              </Link>
 
-              <a
+              <Link
                 href="/Nafiu Mubashir Adedayo FE - CV.pdf"
                 download
                 className="border border-white hover:bg-white hover:text-gray-900 px-8 py-4 rounded-full font-semibold tracking-[.2rem] transition-all duration-300 flex items-center gap-2"
               >
                 <Download className="w-5 h-5" />
                 Download CV
-              </a>
+              </Link>
             </div>
           </motion.div>
         </div>
