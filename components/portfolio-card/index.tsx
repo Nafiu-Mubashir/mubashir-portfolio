@@ -18,7 +18,7 @@ interface PortfolioCardProps {
 
 export const PortfolioCard: React.FC<PortfolioCardProps> = ({
   title,
-  description,
+  // description,
   image,
   stack,
   liveUrl,
