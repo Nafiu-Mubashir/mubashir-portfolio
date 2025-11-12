@@ -935,10 +935,10 @@ export default function Home() {
 }
 
 // Styles and animations remain the same
-const container: React.CSSProperties = {
-  backgroundImage:
-    "url('/hr-bg3.jpg')",
-};
+// const container: React.CSSProperties = {
+//   backgroundImage:
+//     "url('/hr-bg3.jpg')",
+// };
 
 
 const containerVariants = {
