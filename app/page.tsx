@@ -43,8 +43,8 @@ export default function Home() {
     <div className="">
       {/* Hero Section */}
       <div
-        style={container}
-        className="h-screen bg-center md:bg-left bg-cover text-white flex flex-col justify-center relative"
+        // style={container}
+        className="h-screen bg-center md:bg-left bg-cover text-white flex flex-col justify-center relative bg-[url('/hero-bg.jpg')] lg:bg-[url('/hr-bg3.jpg')]"
       >
         <motion.div
           className="hidden md:block fixed"
@@ -939,6 +939,7 @@ const container: React.CSSProperties = {
   backgroundImage:
     "url('/hr-bg3.jpg')",
 };
+
 
 const containerVariants = {
   hidden: { opacity: 0 },
