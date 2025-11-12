@@ -53,7 +53,7 @@ const ContactPage = () => {
       icon: Phone,
       label: "Phone",
       value: "(+234) 803 918 7401",
-      href: "tel:+15551234567",
+      href: "tel:080319187401",
       description: "Let's have a quick chat",
       color: "from-green-500 to-emerald-500"
     },

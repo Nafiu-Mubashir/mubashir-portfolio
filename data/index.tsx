@@ -47,6 +47,18 @@ export const projects = [
     category: "Web App",
     // featured: true,
   },
+   {
+    title: "Bank App",
+    description:
+      "A full-stack e-commerce solution with real-time inventory management, secure payment processing, and an intuitive admin dashboard.",
+    image: "/portfolio-images/portfolio14.png",
+    stack: ["Agular.js", "Boostrap", "Local Storage"],
+    liveUrl: "https://sparkling-tiramisu-53e79a.netlify.app/",
+    // githubUrl: "https://github.com/example",
+    date: "2022",
+    category: "Web App",
+    // featured: true,
+  },
   {
     title: "E-Commerce Landing Page",
     description:
@@ -58,6 +70,18 @@ export const projects = [
     date: "2024",
     category: "Web App",
   },
+  //  {
+  //   title: "Hospital Website",
+  //   description:
+  //     "A full-stack e-commerce solution with real-time inventory management, secure payment processing, and an intuitive admin dashboard.",
+  //   image: "/portfolio-images/portfolio5.png",
+  //   stack: ["Angular.js", "Bootstrap", "Angular UI"],
+  //   liveUrl: "https://kawkaw.vercel.app/",
+  //   // githubUrl: "https://github.com/example",
+  //   date: "2022",
+  //   category: "Web App",
+  //   // featured: true,
+  // },
   {
     title: "Blog Landing Page",
     description:
@@ -154,49 +178,55 @@ export const Skills = [
   {
     name: "Next.js",
     level: 95,
-    icon: "⚛️",
+    icon: "⬛", // Next.js is usually black-and-white themed
     color: "from-black to-gray-600",
   },
   {
     name: "React",
     level: 92,
-    icon: "⚛️",
+    icon: "⚛️", // React atom logo
     color: "from-blue-400 to-blue-600",
   },
   {
     name: "Vue.js",
     level: 88,
-    icon: "🟢",
+    icon: "🟢", // Vue green
     color: "from-green-400 to-green-600",
+  },
+  {
+    name: "Angular",
+    level: 88,
+    icon: "🅰️", // A-like Angular logo
+    color: "from-red-500 to-red-700",
   },
   {
     name: "TypeScript",
     level: 90,
-    icon: "🔷",
+    icon: "💙", // blue heart for TS
     color: "from-blue-600 to-blue-800",
   },
   {
     name: "Redux",
     level: 85,
-    icon: "🔄",
+    icon: "🌀", // swirl to represent Redux flow
     color: "from-purple-500 to-purple-700",
   },
   {
     name: "React Query",
     level: 83,
-    icon: "🚀",
+    icon: "🚀", // rocket for async data fetching
     color: "from-red-500 to-pink-600",
   },
   {
     name: "Tailwind CSS",
     level: 95,
-    icon: "🎨",
+    icon: "🌊", // wave for Tailwind
     color: "from-cyan-400 to-blue-500",
   },
   {
     name: "Framer Motion",
     level: 87,
-    icon: "🎭",
+    icon: "🎞️", // film strip = motion/animation
     color: "from-pink-500 to-rose-600",
   },
 ];

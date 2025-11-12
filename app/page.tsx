@@ -1,6 +1,13 @@
 "use client";
 import { PortfolioCard } from "@/components/portfolio-card";
-import { backend, devTools, projects, services, Skills, technologies } from "@/data";
+import {
+  backend,
+  devTools,
+  projects,
+  services,
+  Skills,
+  technologies,
+} from "@/data";
 import { easeOut, motion, spring } from "framer-motion";
 import {
   Github,
@@ -32,8 +39,6 @@ export default function Home() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
- 
-
   return (
     <div className="">
       {/* Hero Section */}
@@ -60,7 +65,7 @@ export default function Home() {
             ></div>
 
             <motion.a
-              href="https://github.com"
+              href="https://github.com/Nafiu-Mubashir"
               target="_blank"
               rel="noopener noreferrer"
               whileHover={iconHover}
@@ -69,7 +74,7 @@ export default function Home() {
             </motion.a>
 
             <motion.a
-              href="https://linkedin.com"
+              href="https://www.linkedin.com/in/nafiu-mubashir-adedayo/"
               target="_blank"
               rel="noopener noreferrer"
               whileHover={iconHover}
@@ -78,7 +83,7 @@ export default function Home() {
             </motion.a>
 
             <motion.a
-              href="https://twitter.com"
+              href="https://x.com/AdedayoMubashir"
               target="_blank"
               rel="noopener noreferrer"
               whileHover={iconHover}
@@ -90,7 +95,7 @@ export default function Home() {
 
         <div className="container mx-auto md:px-6 text-center md:text-left">
           <motion.div
-            className="space-y-0.5 max-w-screen-xl mx-auto"
+            className="space-y-0.5 max-w-screen-xl text-center mx-auto"
             initial="hidden"
             animate="visible"
             variants={containerVariants}
@@ -127,7 +132,7 @@ export default function Home() {
           </motion.div>
 
           <motion.div
-            className="flex justify-center md:justify-start items-center gap-4 mt-6  max-w-screen-xl mx-auto"
+            className="flex justify-center md:justify-star items-center gap-4 mt-6  max-w-screen-xl mx-auto"
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 2, duration: 0.6 }}
@@ -141,13 +146,13 @@ export default function Home() {
               </button>
             </Link>
 
-            <Link href={'/portfolio'}>
-            <button className="relative overflow-hidden group border border-white rounded-full px-6 py-2 tracking-[.3rem] cursor-pointer text-white">
-              <span className="relative z-10 group-hover:text-black transition-colors duration-500">
-                Portfolio
-              </span>
-              <span className="absolute right-0 top-0 h-full w-0 bg-white group-hover:w-full transition-all duration-500 ease-out"></span>
-            </button>
+            <Link href={"/portfolio"}>
+              <button className="relative overflow-hidden group border border-white rounded-full px-6 py-2 tracking-[.3rem] cursor-pointer text-white">
+                <span className="relative z-10 group-hover:text-black transition-colors duration-500">
+                  Portfolio
+                </span>
+                <span className="absolute right-0 top-0 h-full w-0 bg-white group-hover:w-full transition-all duration-500 ease-out"></span>
+              </button>
             </Link>
           </motion.div>
         </div>
@@ -201,6 +206,7 @@ export default function Home() {
         </div>
       </section>
       {/* Skills Section - Updated */}
+      {/* Skills Section - Tech Stack Style */}
       <section className="py-20 bg-gray-50">
         <div className="container mx-auto px-6">
           <motion.div
@@ -696,7 +702,7 @@ export default function Home() {
                     <h4 className="text-green-600 font-semibold text-lg mb-4">
                       Touch and Pay Technology Limited
                     </h4>
-{/* 
+                    {/* 
                     <div className="space-y-3 text-gray-700">
                       <div className="flex items-start gap-3">
                         <div className="w-2 h-2 bg-blue-500 rounded-full mt-2 flex-shrink-0"></div>
@@ -758,7 +764,7 @@ export default function Home() {
                         "RESTful APIs",
                         "Git",
                         "Real-time Data",
-                        "Flowbite"
+                        "Flowbite",
                       ].map((tech) => (
                         <span
                           key={tech}
@@ -842,14 +848,14 @@ export default function Home() {
               </motion.div>
             ))}
           </div>
-         <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
-              <Link
-                href="/portfolio"
-                className="text-white bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 px-8 py-4 rounded-full font-semibold tracking-[.2rem] transition-all duration-300 hover:scale-105"
-              >
-                View More
-              </Link>
-            </div>
+          <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
+            <Link
+              href="/portfolio"
+              className="text-white bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 px-8 py-4 rounded-full font-semibold tracking-[.2rem] transition-all duration-300 hover:scale-105"
+            >
+              View More
+            </Link>
+          </div>
         </div>
       </section>
       {/* Services Section */}
@@ -930,7 +936,8 @@ export default function Home() {
 
 // Styles and animations remain the same
 const container: React.CSSProperties = {
-  backgroundImage: "url('/hero-bg.jpg')",
+  backgroundImage:
+    "url('/hr-bg3.jpg')",
 };
 
 const containerVariants = {
