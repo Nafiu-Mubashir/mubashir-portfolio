@@ -47,7 +47,7 @@ export const projects = [
     category: "Web App",
     // featured: true,
   },
-   {
+  {
     title: "Bank App",
     description:
       "A full-stack e-commerce solution with real-time inventory management, secure payment processing, and an intuitive admin dashboard.",
@@ -161,7 +161,7 @@ export const projects = [
     date: "2024",
     category: "Web App",
   },
-    {
+  {
     title: "Portfolio Website",
     description:
       "A beautiful weather application with location-based forecasts, interactive maps, and detailed meteorological data visualization.",
@@ -177,79 +177,61 @@ export const projects = [
 export const Skills = [
   {
     name: "Next.js",
-    level: 95,
-    icon: "⬛", // Next.js is usually black-and-white themed
-    color: "from-black to-gray-600",
+    logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg",
   },
   {
     name: "React",
-    level: 92,
-    icon: "⚛️", // React atom logo
-    color: "from-blue-400 to-blue-600",
+    logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
   },
   {
     name: "Vue.js",
-    level: 88,
-    icon: "🟢", // Vue green
-    color: "from-green-400 to-green-600",
+    logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vuejs/vuejs-original.svg",
   },
   {
     name: "Angular",
-    level: 88,
-    icon: "🅰️", // A-like Angular logo
-    color: "from-red-500 to-red-700",
+    logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/angular/angular-original.svg",
   },
   {
     name: "TypeScript",
-    level: 90,
-    icon: "💙", // blue heart for TS
-    color: "from-blue-600 to-blue-800",
+    logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg",
   },
   {
     name: "Redux",
-    level: 85,
-    icon: "🌀", // swirl to represent Redux flow
-    color: "from-purple-500 to-purple-700",
+    logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/redux/redux-original.svg",
   },
   {
     name: "React Query",
-    level: 83,
-    icon: "🚀", // rocket for async data fetching
-    color: "from-red-500 to-pink-600",
+    logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
   },
   {
     name: "Tailwind CSS",
-    level: 95,
-    icon: "🌊", // wave for Tailwind
-    color: "from-cyan-400 to-blue-500",
+    logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg",
   },
   {
     name: "Framer Motion",
-    level: 87,
-    icon: "🎞️", // film strip = motion/animation
-    color: "from-pink-500 to-rose-600",
+    logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/framermotion/framermotion-original.svg",
   },
 ];
 
 export const technologies = [
   {
     name: "Next.js",
-    icon: "⚛️",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg",
     color: "from-black to-gray-700",
   },
   {
     name: "TypeScript",
-    icon: "🔷",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg",
     color: "from-blue-600 to-blue-800",
   },
   {
     name: "Tailwind",
-    icon: "🎨",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg",
     color: "from-cyan-500 to-blue-600",
   },
   {
     name: "Framer Motion",
-    icon: "🎭",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/framermotion/framermotion-original.svg",
     color: "from-purple-500 to-pink-600",
   },
 ];

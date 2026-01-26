@@ -1,5 +1,6 @@
 "use client";
 import { PortfolioCard } from "@/components/portfolio-card";
+import { InfiniteMovingLogo } from "@/components/scrolling-logo";
 import {
   backend,
   devTools,
@@ -22,6 +23,7 @@ import {
   Wrench,
   Database,
 } from "lucide-react";
+import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 
@@ -288,76 +290,12 @@ export default function Home() {
                 <div className="text-orange-100">Technologies</div>
               </motion.div>
             </div>
+            <InfiniteMovingLogo items={Skills} speed="normal" />
 
             {/* Skills Categories */}
-            <div className="grid lg:grid-cols-2 gap-12">
-              {/* Frontend Frameworks & Libraries */}
-              <motion.div
-                initial={{ opacity: 0, x: -50 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.8 }}
-                className="space-y-6"
-              >
-                <div className="flex items-center gap-4 mb-8">
-                  <div className="p-3 rounded-xl bg-gradient-to-br from-blue-500 to-purple-600">
-                    <Code className="w-6 h-6 text-white" />
-                  </div>
-                  <div>
-                    <h3 className="text-2xl font-bold text-gray-900">
-                      Frontend Development
-                    </h3>
-                    <p className="text-gray-600">
-                      Frameworks & Libraries I Master
-                    </p>
-                  </div>
-                </div>
-
-                {Skills.map((skill, index) => (
-                  <motion.div
-                    key={skill.name}
-                    initial={{ opacity: 0, y: 20 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ delay: index * 0.1 + 0.2, duration: 0.6 }}
-                    className="group bg-white p-6 rounded-xl shadow-sm border border-gray-100 hover:shadow-lg hover:border-gray-200 transition-all duration-300"
-                  >
-                    <div className="flex items-center justify-between mb-4">
-                      <div className="flex items-center gap-3">
-                        <div
-                          className={`w-10 h-10 rounded-lg bg-gradient-to-r ${skill.color} flex items-center justify-center text-white font-bold text-sm`}
-                        >
-                          {skill.icon}
-                        </div>
-                        <div>
-                          <h4 className="font-semibold text-gray-900 group-hover:text-blue-600 transition-colors">
-                            {skill.name}
-                          </h4>
-                          <p className="text-sm text-gray-500">
-                            Proficiency: {skill.level}%
-                          </p>
-                        </div>
-                      </div>
-                    </div>
-                    <div className="w-full bg-gray-100 rounded-full h-2 overflow-hidden">
-                      <motion.div
-                        className={`h-2 rounded-full bg-gradient-to-r ${skill.color}`}
-                        initial={{ width: 0 }}
-                        whileInView={{ width: `${skill.level}%` }}
-                        viewport={{ once: true }}
-                        transition={{
-                          delay: index * 0.1 + 0.4,
-                          duration: 1.2,
-                          ease: "easeOut",
-                        }}
-                      />
-                    </div>
-                  </motion.div>
-                ))}
-              </motion.div>
-
-              {/* Developer Tools & Backend */}
-              <div className="space-y-8">
+            <div className="space-y-6">
+              <div className="grid lg:grid-cols-2 gap-6">
+                {/* Developer Tools & Backend */}
                 {/* Core Stack Highlight */}
                 <motion.div
                   initial={{ opacity: 0, y: 30 }}
@@ -380,49 +318,16 @@ export default function Home() {
                         transition={{ delay: index * 0.1 + 0.2, duration: 0.5 }}
                         className={`bg-gradient-to-r ${tech.color} rounded-xl p-4 text-center text-white hover:scale-105 transition-transform duration-300 cursor-pointer`}
                       >
-                        <div className="text-2xl mb-2">{tech.icon}</div>
+                        <div className="flex justify-center mb-2">
+                          <Image
+                            src={tech.icon}
+                            alt={tech.name}
+                            width={40}
+                            height={40}
+                            className="drop-shadow-lg"
+                          />
+                        </div>
                         <div className="font-medium text-sm">{tech.name}</div>
-                      </motion.div>
-                    ))}
-                  </div>
-                </motion.div>
-
-                {/* Developer Tools */}
-                <motion.div
-                  initial={{ opacity: 0, x: 50 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.8, delay: 0.2 }}
-                  className="bg-white rounded-2xl p-8 border border-gray-200"
-                >
-                  <div className="flex items-center gap-4 mb-6">
-                    <div className="p-3 rounded-xl bg-gradient-to-br from-green-500 to-teal-600">
-                      <Wrench className="w-6 h-6 text-white" />
-                    </div>
-                    <div>
-                      <h4 className="text-xl font-bold text-gray-900">
-                        Developer Tools
-                      </h4>
-                      <p className="text-gray-600">Professional Workflow</p>
-                    </div>
-                  </div>
-                  <div className="grid grid-cols-2 gap-4">
-                    {devTools.map((tool, index) => (
-                      <motion.div
-                        key={tool}
-                        initial={{ opacity: 0, y: 10 }}
-                        whileInView={{ opacity: 1, y: 0 }}
-                        viewport={{ once: true }}
-                        transition={{
-                          delay: index * 0.05 + 0.4,
-                          duration: 0.4,
-                        }}
-                        className="flex items-center gap-2 p-3 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors duration-200"
-                      >
-                        <div className="w-2 h-2 bg-green-500 rounded-full"></div>
-                        <span className="text-sm font-medium text-gray-700">
-                          {tool}
-                        </span>
                       </motion.div>
                     ))}
                   </div>
@@ -465,7 +370,48 @@ export default function Home() {
                     ))}
                   </div>
                 </motion.div>
+                {/* </div> */}
               </div>
+              {/* Developer Tools */}
+              <motion.div
+                initial={{ opacity: 0, x: 50 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.8, delay: 0.2 }}
+                className="bg-white rounded-2xl p-8 border border-gray-200"
+              >
+                <div className="flex items-center gap-4 mb-6">
+                  <div className="p-3 rounded-xl bg-gradient-to-br from-green-500 to-teal-600">
+                    <Wrench className="w-6 h-6 text-white" />
+                  </div>
+                  <div>
+                    <h4 className="text-xl font-bold text-gray-900">
+                      Developer Tools
+                    </h4>
+                    <p className="text-gray-600">Professional Workflow</p>
+                  </div>
+                </div>
+                <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
+                  {devTools.map((tool, index) => (
+                    <motion.div
+                      key={tool}
+                      initial={{ opacity: 0, y: 10 }}
+                      whileInView={{ opacity: 1, y: 0 }}
+                      viewport={{ once: true }}
+                      transition={{
+                        delay: index * 0.05 + 0.4,
+                        duration: 0.4,
+                      }}
+                      className="flex items-center gap-2 p-3 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors duration-200"
+                    >
+                      <div className="w-2 h-2 bg-green-500 rounded-full"></div>
+                      <span className="text-sm font-medium text-gray-700">
+                        {tool}
+                      </span>
+                    </motion.div>
+                  ))}
+                </div>
+              </motion.div>
             </div>
           </motion.div>
         </div>
@@ -939,7 +885,6 @@ export default function Home() {
 //   backgroundImage:
 //     "url('/hr-bg3.jpg')",
 // };
-
 
 const containerVariants = {
   hidden: { opacity: 0 },
