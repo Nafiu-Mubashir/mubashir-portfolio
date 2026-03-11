@@ -4,6 +4,8 @@ import "./globals.css";
 import Navbar from "@/components/navbar";
 import Footer from "@/components/footer";
 import { BackToTopButton } from "@/components/back-to-top-button";
+import AnalyticsLoader from "@/components/cookies/AnalyticsLoader";
+import CookieConsentBanner from "@/components/cookies/CookieConsentBanner";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -30,6 +32,8 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900`}
       >
+        <AnalyticsLoader />
+        <CookieConsentBanner />
         <Navbar />
         {children}
         <BackToTopButton />

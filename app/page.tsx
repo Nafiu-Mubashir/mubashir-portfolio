@@ -139,7 +139,9 @@ export default function Home() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 2, duration: 0.6 }}
           >
-            <Link href="/Nafiu Mubashir Adedayo FE - CV.pdf" download>
+            <Link href="https://drive.google.com/uc?export=download&id=1ZqMT5l8yV_W9xlfRYNeNNjzUR6DUT5ZV"
+            //  download
+             >
               <button className="relative overflow-hidden group border border-white rounded-full px-6 py-2 tracking-[.3rem] cursor-pointer text-white">
                 <span className="relative z-10 group-hover:text-black transition-colors duration-500">
                   Resume
@@ -865,8 +867,8 @@ export default function Home() {
               </Link>
 
               <Link
-                href="/Nafiu Mubashir Adedayo FE - CV.pdf"
-                download
+                href="https://drive.google.com/uc?export=download&id=1ZqMT5l8yV_W9xlfRYNeNNjzUR6DUT5ZV"
+                // download
                 className="border border-white hover:bg-white hover:text-gray-900 px-8 py-4 rounded-full font-semibold tracking-[.2rem] transition-all duration-300 flex items-center gap-2"
               >
                 <Download className="w-5 h-5" />
